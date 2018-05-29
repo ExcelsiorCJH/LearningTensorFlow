@@ -179,4 +179,8 @@ $RECYCLE.BIN/
 *.lnk
 
 
+# data directory
+data/
+data/*
+
 # End of https://www.gitignore.io/api/linux,macos,python,windows,jupyternotebook,visualstudiocode
