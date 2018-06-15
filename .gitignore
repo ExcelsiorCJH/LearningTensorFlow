@@ -183,4 +183,8 @@ $RECYCLE.BIN/
 data/
 data/*
 
+# TensorBoard log dir
+logs/
+logs/*
+
 # End of https://www.gitignore.io/api/linux,macos,python,windows,jupyternotebook,visualstudiocode
