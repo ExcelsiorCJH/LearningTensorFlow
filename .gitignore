@@ -187,4 +187,8 @@ data/*
 logs/
 logs/*
 
+# TensorFlow model dir
+model/
+model/*
+
 # End of https://www.gitignore.io/api/linux,macos,python,windows,jupyternotebook,visualstudiocode
