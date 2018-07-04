@@ -24,6 +24,8 @@
     - 7.2 - [TFLearn](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap07-TF_Abstractions/Chap07_2-TFLearn.ipynb)
     - 7.3 - [Keras](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap07-TF_Abstractions/Chap07_3-Keras.ipynb)
     - 7.4 - [TF-Slim](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap07-TF_Abstractions/Chap07_4-TF_Slim.ipynb)
+    
+- Chap08 - [큐, 스레드, 데이터 읽기](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap08-DataRead_and_TFRecord/Chap08-DataRead_and_TFRecord.ipynb)
 
 
 
