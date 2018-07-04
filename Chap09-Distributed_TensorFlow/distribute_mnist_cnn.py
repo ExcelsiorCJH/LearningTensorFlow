@@ -9,11 +9,13 @@ def mnist_load():
 
     # Train - Image
     train_x = train_x.astype('float32') / 255
+    train_x = train_x.reshape(-1, 28*28)
     # Train - Label(OneHot)
     train_y = tf.keras.utils.to_categorical(train_y, num_classes=10)
 
     # Test - Image
     test_x = test_x.astype('float32') / 255
+    test_x = test_x.reshape(-1, 28*28)
     # Test - Label(OneHot)
     test_y = tf.keras.utils.to_categorical(test_y, num_classes=10)
 
@@ -68,6 +70,12 @@ def net(x):
 ########################################
 # 3. 분산 학습
 
+# Mini-Batch Dataset
+dataset = tf.data.Dataset.from_tensor_slices(({"image": train_x}, train_y))
+dataset = dataset.shuffle(100000).repeat().batch(BATCH_SIZE)
+iterator = dataset.make_one_shot_iterator()
+next_batch = iterator.get_next()
+
 if FLAGS.job_name == "ps":
     server.join()
 
@@ -106,17 +114,17 @@ elif FLAGS.job_name == "worker":
 
         while not sv.should_stop() and step <= TRAINING_STEPS:
 
-            batch_x, batch_y = mnist.train.next_batch(BATCH_SIZE)
+            batch_x, batch_y = sess.run(next_batch)
 
             _, acc, step = sess.run([train_step, accuracy, global_step],
-                                    feed_dict={x: batch_x, y_: batch_y})
+                                    feed_dict={x: batch_x['image'], y_: batch_y})
 
             if step % PRINT_EVERY == 0:
                 print("Worker : {}, Step: {}, Accuracy (batch): {}".
                       format(FLAGS.task_index, step, acc))
 
         test_acc = sess.run(accuracy,
-                            feed_dict={x: mnist.test.images, y_: mnist.test.labels})
+                            feed_dict={x: test_x, y_: test_y})
         print("Test-Accuracy: {}".format(test_acc))
 
     sv.stop()
