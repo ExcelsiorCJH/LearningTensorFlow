@@ -27,6 +27,11 @@
     
 - Chap08 - [큐, 스레드, 데이터 읽기](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap08-DataRead_and_TFRecord/Chap08-DataRead_and_TFRecord.ipynb)
 
+- Chap09 - [분산 텐서플로](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap09-Distributed_TensorFlow/Chap09-Distributed_TensorFlow.ipynb)
+
+- Chap10 - 모델 엑스포트와 서빙
+    - 10.1 - [TensorFlow Saver](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap10-Exporting_and_Serving_Model/Chap10-1_TF_Saver.ipynb)
+    - 10.2 - [TensorFlow Serving](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap10-Exporting_and_Serving_Model/Chap10-2_TF_Serving.ipynb)
 
 
 ## 3. 참고자료
