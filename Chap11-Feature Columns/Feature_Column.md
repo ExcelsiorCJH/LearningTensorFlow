@@ -620,3 +620,8 @@ Epoch: 300, RMSE: 95.3159
 '''
 ```
 
+
+
+## 4. 마무리
+
+#### 이번 포스팅에서는 Feature Engineering 방법과 텐서플로의 Feature Column에 대해 알아 보았다. 위의 코드에 대한 전체 코드는 https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap11-Feature%20Columns/Chap11-Feature_Column.ipynb 에서 확인할 수 있다.
