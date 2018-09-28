@@ -33,6 +33,8 @@
     - 10.1 - [TensorFlow Saver](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap10-Exporting_and_Serving_Model/Chap10-1_TF_Saver.ipynb)
     - 10.2 - [TensorFlow Serving](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap10-Exporting_and_Serving_Model/Chap10-2_TF_Serving.ipynb)
 
+#### [Chap11 ~]는공부 후 추가 (교재에 없는 내용) 
+- Chap11 - [TensorFlow Feature Column](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap11-Feature%20Columns/Chap11-Feature_Column.ipynb)
 
 ## 3. 참고자료
 
