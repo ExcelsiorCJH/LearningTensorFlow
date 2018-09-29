@@ -169,6 +169,8 @@ def model_fn(
 위의 형식을 토대로 붓꽃 데이터 분류기에 대한 model function을 아래와 같이 작성할 수 있다.
 
 ```python
+# https://github.com/tensorflow/models/blob/master/samples/core/get_started/custom_estimator.py
+
 def model_fn(features, labels, mode, params):
     
     # input layer
@@ -183,6 +185,14 @@ def model_fn(features, labels, mode, params):
     
     # prediction
     predicted_class = tf.argmax(logits, 1)
+    # PREDICT Mode
+    if mode == tf.estimator.ModeKeys.PREDICT:
+        predictions = {
+            'class_ids': predicted_class[:, tf.newaxis],
+            'probabilities': tf.nn.softmax(logits),
+            'logits': logits,
+        }
+        return tf.estimator.EstimatorSpec(mode, predictions=predictions)
     
     # loss
     loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
@@ -203,15 +213,6 @@ def model_fn(features, labels, mode, params):
     # EVAL Mode
     if mode == tf.estimator.ModeKeys.EVAL:
         return tf.estimator.EstimatorSpec(mode, loss=loss, eval_metric_ops=metrics)
-    
-    # PREDICT Mode
-    if mode == tf.estimator.ModeKeys.PREDICT:
-        predictions = {
-            'class_ids': predited_class[:, tf.newaxis],
-            'probabilities': tf.nn.softmax(logits),
-            'logits': logits,
-        }
-        return tf.estimator.EstimatorSpec(mode, predictions=predictions)
 ```
 
 
