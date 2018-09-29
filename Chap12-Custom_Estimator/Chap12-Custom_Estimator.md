@@ -1,10 +1,10 @@
 # Custom Estimator
 
-
+df
 
 > 이번 포스팅은 [TensorFlow:tm:>GUIDE](https://www.tensorflow.org/guide/custom_estimators#tensorboard)를 참고했으며, TensorFlow Estimator에 대한 자세한 내용은 [여기](http://excelsior-cjh.tistory.com/157?category=940399)를 참고하면 된다.
 
-
+df
 
 ## 1. Estimator 란
 
@@ -383,5 +383,5 @@ Prediction is "Virginica" (98.4%), expected "Virginica"
 
 ## 4. 마무리
 
-이번 포스팅에서는 텐서플로의 Estimator 중 Custom Estimator에 대해 알아 보았다. 위의 코드에 대해서는 
+이번 포스팅에서는 텐서플로의 Estimator 중 Custom Estimator에 대해 알아 보았다. 위의 코드에 대해서는 https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap12-Custom_Estimator/Chap12-Custom_Estimator.ipynb 에서 확인할 수 있다.
 
