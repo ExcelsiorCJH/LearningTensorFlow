@@ -35,6 +35,7 @@
 
 #### [Chap11 ~]는공부 후 추가 (교재에 없는 내용) 
 - Chap11 - [TensorFlow Feature Column](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap11-Feature%20Columns/Chap11-Feature_Column.ipynb)
+- Chap12 - [Custom Estimator](https://github.com/ExcelsiorCJH/LearningTensorFlow/blob/master/Chap12-Custom_Estimator/Chap12-Custom_Estimator.ipynb)
 
 ## 3. 참고자료
 
